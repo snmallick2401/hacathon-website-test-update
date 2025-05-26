@@ -31,10 +31,4 @@ A clean, responsive, and animated landing page for the **UCET Hacks 2025** hacka
 
 ---
 
-## 🚀 Setup Instructions
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/utpattithon-website.git
-cd utpattithon-website
