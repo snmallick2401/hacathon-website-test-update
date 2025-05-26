@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UCET Hacks 2025 | Utpattithon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+  <style>
+    .fade {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    .animate-heading {
+      animation: headingFade 1s ease-out both;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes headingFade {
+      0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    body {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    nav a {
+      position: relative;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease-in-out;
+      border-radius: 9999px;
+    }
+    nav a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    nav a:hover::before {
+      border-color: #3b82f6;
+    }
+    nav a:hover {
+      background-color: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="text-gray-100 transition duration-500">
+
+  <!-- Navbar -->
+  <header class="bg-black text-white p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">UCET Hacks 2025</h1>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">☰</button>
+      </div>
+      <nav id="menu" class="hidden md:flex space-x-4 text-sm sm:text-base">
+        <a href="#home">Home</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#sponsorship">Sponsorship</a>
+        <a href="#rules">Rules</a>
+        <a href="#domains">Domains</a>
+        <a href="#joinus">Join Us</a>
+        <a href="#login">Login</a>
+        <a href="#signup">Signup</a>
+        <button onclick="toggleDark()" class="bg-gray-700 text-white px-2 py-1 rounded-md text-xs ml-2">🌙/☀️</button>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 p-4">
+      <a href="#home">Home</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#sponsorship">Sponsorship</a>
+      <a href="#rules">Rules</a>
+      <a href="#domains">Domains</a>
+      <a href="#joinus">Join Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-20 shadow-md">
+    <h2 class="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text animate-heading mb-4">
+      UCET Hacks 2025
+    </h2>
+    <p class="mb-6 text-lg fade">The Genesis of Innovation – A Hackathon Organised by UCET VBU</p>
+    <a 
+      href="https://forms.gle/your-real-form-link"
+      target="_blank"
+      class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition fade"
+    >
+      Register Now
+    </a>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-6 text-center bg-gray-900">
+    <p id="quoteBox" class="text-xl italic font-semibold text-gray-300 fade"></p>
+  </section>
+
+  
+  
+<!-- Info Cards -->
+  <section class="py-16 px-4 sm:px-6 lg:px-12 bg-black" id="info">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading" id="eligibility">Eligibility</h3>
+        <ul class="list-disc pl-5">
+          <li>Current students of UCET VBU</li>
+          <li>Team size: 3 to 6 members</li>
+          <li>Inter-departmental teams encouraged</li>
+          <li>All members must contribute</li>
+        </ul>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md" id="sponsorship">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">Sponsorship</h3>
+        <p>Support innovation, gain visibility and contribute to tech growth. Contact the organizing team for opportunities.</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md" id="rules">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">Rules</h3>
+        <ul class="list-disc pl-5">
+          <li>Build and deploy within 6 hours</li>
+          <li>Use platforms like GitHub, Vercel, Firebase</li>
+          <li>Project must be functional and creative</li>
+          <li>Judged on innovation, tech, usability</li>
+        </ul>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md" id="joinus">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">Join Us</h3>
+        <p>Be part of Jharkhand's top hackathon. Participants, sponsors, and volunteers welcome to make it memorable!</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">Evaluation Criteria</h3>
+        <ul class="list-disc pl-5">
+          <li>Innovation & Creativity – 25%</li>
+          <li>Technical Complexity – 20%</li>
+          <li>Functionality – 20%</li>
+          <li>Deployment & Usability – 15%</li>
+          <li>Presentation & Demo – 20%</li>
+        </ul>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">Expected Outcomes</h3>
+        <ul class="list-disc pl-5">
+          <li>Real-world exposure to development practices and current technologies</li>
+          <li>Tailored Industry-Ready Projects Participants will develop tech solutions aligned with real-world challenges, ideal for showcasing in resumes, portfolios, or GitHub profiles.</li>
+          <li>Enhanced Resume with Relevant Experience The hackathon experience can be explicitly listed under ‘Projects’ or ‘Experience’ in resumes, emphasizing teamwork, innovation, and deployment.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes and Guidelines -->
+  <section class="bg-black py-16 px-6" id="domains">
+    <h2 class="text-4xl font-bold text-center mb-10 text-white animate-heading">Themes and Project Guidelines</h2>
+    <div class="space-y-8 max-w-4xl mx-auto">
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">1. 🏥 Health Sector & Wellness</h3>
+        <p>Innovative solutions to improve healthcare delivery, mental health support, fitness tracking, medical diagnostics, and overall wellness.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">2. ⚡ Smart Energy & Sustainability</h3>
+        <p>Technologies for energy efficiency, renewable energy, waste reduction, sustainable living, smart grids, and reducing carbon footprints.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">3. 🌾 Smart Agriculture & Food Technology</h3>
+        <p>IoT, data analytics, automation in agriculture to boost crop yield, reduce waste, enhance supply chain transparency, and ensure food safety.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">4. 📚 Education & Skill Development</h3>
+        <p>Tools and platforms for e-learning, virtual classrooms, personalized learning, and educational access in underserved communities.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-2 animate-heading">5. 🚀 Miscellaneous Innovation & Emerging Technologies</h3>
+        <p>Creative, technically sound ideas in blockchain, AR, robotics, digital art, or other frontier technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    const quotes = [
+      "Innovation distinguishes between a leader and a follower. – Steve Jobs",
+      "The best way to predict the future is to invent it. – Alan Kay",
+      "Hackathons: Where ideas turn into reality in 24 hours!",
+      "Stay hungry, stay foolish. – Steve Jobs",
+      "Code is like humor. When you have to explain it, it’s bad. – Cory House",
+      "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+      "Success usually comes to those who are too busy to be looking for it. – Henry David Thoreau"
+    ];
+
+    function displayRandomQuote() {
+      const quoteBox = document.getElementById("quoteBox");
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteBox.textContent = quotes[randomIndex];
+    }
+
+    // Initial display
+    displayRandomQuote();
+
+    // Rotate quote every 10 seconds
+    setInterval(displayRandomQuote, 10000);
+  </script>
+
+</body>
+</html>
